@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Domain;
 using System.Web.Mvc;
 
 namespace Ui.Web.Controllers
@@ -11,6 +8,7 @@ namespace Ui.Web.Controllers
         // GET: Home
         public ActionResult Index()
         {
+				var getter = TaskGetter.Get();
             return View();
         }
     }

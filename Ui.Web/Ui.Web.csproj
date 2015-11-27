@@ -92,11 +92,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Scripts\Libs\jquery-2.1.4.js" />
+    <Content Include="Scripts\Built\admin_bundle.js" />
+    <Content Include="Scripts\Built\common.js" />
+    <Content Include="Scripts\Built\main_bundle.js" />
+    <Content Include="Scripts\Libs\jquery.js" />
     <Content Include="Scripts\Libs\require_2_1_22.js" />
-    <Content Include="Scripts\Src\app.js" />
-    <Content Include="Scripts\Src\Core\utils.js" />
     <Content Include="Web.config" />
+    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -132,12 +134,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\Src\bootstrapper.ts" />
-    <TypeScriptCompile Include="Scripts\Src\Car.ts" />
-    <TypeScriptCompile Include="Scripts\Src\Engine.ts" />
-    <TypeScriptCompile Include="Scripts\Src\main.ts" />
+    <TypeScriptCompile Include="Scripts\Src\Admin\admin.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\Src\Common\Strings.ts" />
+    <TypeScriptCompile Include="Scripts\Src\Data\People.ts" />
+    <TypeScriptCompile Include="Scripts\Src\Main\main.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\Typings\jquery.d.ts" />
-    <TypeScriptCompile Include="Scripts\Src\MyTypescript.ts" />
     <TypeScriptCompile Include="Scripts\Typings\require_2_1_20.d.ts" />
   </ItemGroup>
   <ItemGroup>
@@ -153,7 +158,7 @@
     <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
     <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
     <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
-    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
     <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
     <TypeScriptOutFile />
     <TypeScriptOutDir />
